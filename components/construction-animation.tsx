@@ -11,9 +11,9 @@ export default function ConstructionAnimation() {
 
         {/* --- Skyscraper (unfinished) --- */}
         {/* Completed lower floors */}
-        <rect x="140" y="180" width="90" height="110" fill="#E5E7EB" stroke="#2C2C2C" strokeWidth="2" />
+        <rect x="140" y="180" width="90" height="110" fill="#E5E7EB" stroke="#0F2D52" strokeWidth="2" />
         {/* Windows on completed floors */}
-        <g fill="#2C2C2C" opacity="0.5">
+        <g fill="#0F2D52" opacity="0.5">
           <rect x="150" y="195" width="14" height="14" />
           <rect x="175" y="195" width="14" height="14" />
           <rect x="200" y="195" width="14" height="14" />
@@ -29,7 +29,7 @@ export default function ConstructionAnimation() {
         </g>
 
         {/* Unfinished top floor - exposed steel frame */}
-        <g stroke="#2C2C2C" strokeWidth="3" fill="none">
+        <g stroke="#0F2D52" strokeWidth="3" fill="none">
           <rect x="140" y="150" width="90" height="30" />
           <line x1="140" y1="150" x2="140" y2="180" />
           <line x1="165" y1="150" x2="165" y2="180" />
@@ -39,7 +39,7 @@ export default function ConstructionAnimation() {
         </g>
 
         {/* Scaffolding on the side */}
-        <g stroke="#FFC72C" strokeWidth="2">
+        <g stroke="#4FA9FF" strokeWidth="2">
           <line x1="235" y1="150" x2="235" y2="290" />
           <line x1="245" y1="150" x2="245" y2="290" />
           <line x1="235" y1="160" x2="245" y2="160" />
@@ -51,30 +51,30 @@ export default function ConstructionAnimation() {
 
         {/* Beam being placed on top (rises + settles into place, loops) */}
         <g style={{ animation: "beamLift 6s ease-in-out infinite" }}>
-          <rect x="150" y="0" width="70" height="10" rx="2" fill="#FFC72C" stroke="#2C2C2C" strokeWidth="1.5" />
+          <rect x="150" y="0" width="70" height="10" rx="2" fill="#4FA9FF" stroke="#0F2D52" strokeWidth="1.5" />
         </g>
 
         {/* --- Crane --- */}
         {/* Crane mast */}
-        <rect x="60" y="40" width="10" height="250" fill="#2C2C2C" />
-        <rect x="42" y="284" width="46" height="12" rx="2" fill="#2C2C2C" />
+        <rect x="60" y="40" width="10" height="250" fill="#0F2D52" />
+        <rect x="42" y="284" width="46" height="12" rx="2" fill="#0F2D52" />
 
         {/* Crane counter-jib (short side, back) */}
-        <rect x="20" y="34" width="45" height="8" rx="3" fill="#2C2C2C" />
+        <rect x="20" y="34" width="45" height="8" rx="3" fill="#0F2D52" />
         <rect x="24" y="42" width="10" height="14" fill="#9CA3AF" />
 
         {/* Crane jib (long arm, swings) */}
         <g style={{ transformOrigin: "65px 38px", animation: "craneSwing 6s ease-in-out infinite" }}>
-          <rect x="65" y="34" width="200" height="8" rx="3" fill="#FFC72C" />
+          <rect x="65" y="34" width="200" height="8" rx="3" fill="#4FA9FF" />
           {/* Trolley */}
-          <rect x="180" y="42" width="10" height="6" fill="#2C2C2C" />
+          <rect x="180" y="42" width="10" height="6" fill="#0F2D52" />
           {/* Cable down to the beam */}
-          <line x1="185" y1="48" x2="185" y2="150" stroke="#2C2C2C" strokeWidth="1.5" />
+          <line x1="185" y1="48" x2="185" y2="150" stroke="#0F2D52" strokeWidth="1.5" />
         </g>
 
         {/* Hook + beam load (bobs, synced loosely with beamLift) */}
         <g style={{ animation: "hookBob 6s ease-in-out infinite" }}>
-          <rect x="170" y="150" width="30" height="8" rx="2" fill="#FFC72C" stroke="#2C2C2C" strokeWidth="1.5" />
+          <rect x="170" y="150" width="30" height="8" rx="2" fill="#4FA9FF" stroke="#0F2D52" strokeWidth="1.5" />
         </g>
 
         {/* Dust puffs at base */}

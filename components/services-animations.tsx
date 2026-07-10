@@ -1,8 +1,8 @@
 "use client";
 
 const COLORS = {
-  dark: "#2C2C2C",
-  yellow: "#FFC72C",
+  dark: "#0F2D52",
+  yellow: "#4FA9FF",
   light: "#E5E7EB",
   gray: "#D1D5DB",
 };

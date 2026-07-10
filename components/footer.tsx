@@ -41,7 +41,7 @@ export default function Footer() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={footerVariants}
-                className="bg-[#F59E0B] py-20 px-6"
+                className="bg-[#4FA9FF] py-20 px-6"
             >
                 <motion.div
                     variants={itemVariants}
@@ -59,7 +59,7 @@ export default function Footer() {
 
                     <Link
                         href="/contact"
-                        className="inline-flex items-center gap-2 bg-white text-[#0F172A] px-8 py-4 rounded-xl font-semibold shadow-xl hover:scale-105 transition-all duration-300"
+                        className="inline-flex items-center gap-2 bg-white text-[#0F2D52] px-8 py-4 rounded-xl font-semibold shadow-xl hover:scale-105 transition-all duration-300"
                     >
                         Get a Free Quote
                         <ArrowRight size={20} />
@@ -75,7 +75,7 @@ export default function Footer() {
                 xmlns="http://www.w3.org/2000/svg"
             >
                 <path
-                    fill="#0F172A"
+                    fill="#0F2D52"
                     d="M0,96L80,85.3C160,75,320,53,480,58.7C640,64,800,96,960,96C1120,96,1280,64,1360,48L1440,32V120H1360C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120H0Z"
                 />
             </svg>
@@ -87,7 +87,7 @@ export default function Footer() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={footerVariants}
-                className="bg-[#0F172A] text-white relative overflow-hidden"
+                className="bg-[#0F2D52] text-white relative overflow-hidden"
             >
 
                 {/* Background Pattern */}
@@ -102,12 +102,12 @@ export default function Footer() {
                         <div className="flex items-center gap-3 mb-5">
 
                             <Building2
-                                className="text-[#F59E0B]"
+                                className="text-[#4FA9FF]"
                                 size={34}
                             />
 
                             <h3 className="text-3xl font-black">
-                                Add<span className="text-[#F59E0B]">bill</span>
+                                Add<span className="text-[#4FA9FF]">bill</span>
                             </h3>
                         </div>
 
@@ -126,7 +126,7 @@ export default function Footer() {
                                         whileHover={{ y: -5, scale: 1.1 }}
                                         key={i}
                                         href="#"
-                                        className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#F59E0B] transition"
+                                        className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#4FA9FF] transition"
                                     >
                                         <Icon size={18} />
                                     </motion.a>
@@ -154,7 +154,7 @@ export default function Footer() {
                                 <Link
                                     key={item}
                                     href="/"
-                                    className="block text-white/70 hover:text-[#F59E0B] hover:translate-x-2 transition-all duration-300"
+                                    className="block text-white/70 hover:text-[#4FA9FF] hover:translate-x-2 transition-all duration-300"
                                 >
                                     {item}
                                 </Link>
@@ -197,7 +197,7 @@ export default function Footer() {
 
                             <div className="flex gap-3">
 
-                                <MapPin className="text-[#F59E0B]" />
+                                <MapPin className="text-[#4FA9FF]" />
 
                                 <span className="text-white/70">
                                     Nairobi, Kenya
@@ -207,7 +207,7 @@ export default function Footer() {
 
                             <div className="flex gap-3">
 
-                                <Phone className="text-[#F59E0B]" />
+                                <Phone className="text-[#4FA9FF]" />
 
                                 <span className="text-white/70">
                                     +254 700 123 456
@@ -217,7 +217,7 @@ export default function Footer() {
 
                             <div className="flex gap-3">
 
-                                <Mail className="text-[#F59E0B]" />
+                                <Mail className="text-[#4FA9FF]" />
 
                                 <span className="text-white/70">
                                     info@addbill.com
@@ -227,7 +227,7 @@ export default function Footer() {
 
                             <div className="flex gap-3">
 
-                                <Clock className="text-[#F59E0B]" />
+                                <Clock className="text-[#4FA9FF]" />
 
                                 <span className="text-white/70">
                                     Mon - Fri
@@ -257,14 +257,14 @@ export default function Footer() {
 
                             <Link
                                 href="/privacy"
-                                className="hover:text-[#F59E0B] transition"
+                                className="hover:text-[#4FA9FF] transition"
                             >
                                 Privacy Policy
                             </Link>
 
                             <Link
                                 href="/terms"
-                                className="hover:text-[#F59E0B] transition"
+                                className="hover:text-[#4FA9FF] transition"
                             >
                                 Terms of Service
                             </Link>

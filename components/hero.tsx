@@ -153,7 +153,7 @@ export default function Hero() {
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/80 via-[#0F172A]/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#0F2D52]/80 via-[#0F2D52]/40 to-transparent" />
 
       <div className="relative h-full flex items-center justify-end lg:justify-between">
         <div className="hidden lg:block lg:w-1/2" />
@@ -189,7 +189,7 @@ export default function Hero() {
               >
                 <Link
                   href={slides[currentSlide].buttonLink}
-                  className="inline-block px-6 py-2.5 md:px-8 md:py-3 bg-[#F59E0B] text-white font-semibold rounded-lg shadow-lg hover:bg-[#D97706] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:ring-offset-2"
+                  className="inline-block px-6 py-2.5 md:px-8 md:py-3 bg-[#4FA9FF] text-white font-semibold rounded-lg shadow-lg hover:bg-[#3D8FE0] transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#4FA9FF] focus:ring-offset-2"
                 >
                   {slides[currentSlide].button}
                 </Link>

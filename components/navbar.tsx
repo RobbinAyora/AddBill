@@ -7,12 +7,11 @@ import { cn } from "@/lib/utils"
 import { Menu, X, ChevronDown } from "lucide-react"
 
 const services = [
-  { href: "/services/residential", label: "Residential Construction" },
-  { href: "/services/commercial", label: "Commercial Construction" },
-  { href: "/services/renovations", label: "Renovations" },
-  { href: "/services/project-management", label: "Project Management" },
-  { href: "/services/civil-engineering", label: "Civil Engineering" },
-  { href: "/services/interior-design", label: "Interior Design" },
+  { href: "/services/cost-estimation", label: "Cost Estimation & Budgeting" },
+  { href: "/services/tendering-procurement", label: "Tendering & Procurement" },
+  { href: "/services/contract-administration", label: "Contract Administration" },
+  { href: "/services/project-valuation", label: "Project Valuation" },
+  { href: "/services/cost-control", label: "Cost Control & Monitoring" },
 ]
 
 const projects = [
@@ -29,7 +28,6 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   { href: "/projects", label: "Projects" },
-  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ]
 
@@ -84,10 +82,10 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-16 lg:h-20">
             <Link href="/" className="flex-shrink-0 group" aria-label="Addbill Home">
               <span className="text-2xl lg:text-3xl font-extrabold tracking-tight">
-                <span className="text-[#0F172A] transition-colors duration-300 group-hover:text-[#F59E0B]">
+                <span className="text-[#0F2D52] transition-colors duration-300 group-hover:text-[#4FA9FF]">
                   Add
                 </span>
-                <span className="text-[#F59E0B] transition-colors duration-300 group-hover:text-[#0F172A]">
+                <span className="text-[#4FA9FF] transition-colors duration-300 group-hover:text-[#0F2D52]">
                   bill
                 </span>
               </span>
@@ -103,7 +101,7 @@ export default function Navbar() {
                       onMouseLeave={() => setServicesDropdownOpen(false)}
                     >
                       <button
-                        className="flex items-center gap-1 text-[#1E293B] hover:text-[#F59E0B] transition-colors duration-300 font-medium text-base focus:outline-none focus:text-[#F59E0B]"
+                        className="flex items-center gap-1 text-[#0F2D52] hover:text-[#4FA9FF] transition-colors duration-300 font-medium text-base focus:outline-none focus:text-[#4FA9FF]"
                         aria-haspopup="true"
                         aria-expanded={servicesDropdownOpen}
                         aria-label="Services menu"
@@ -125,7 +123,8 @@ export default function Navbar() {
                               <Link
                                 key={service.href}
                                 href={service.href}
-                                className="block px-4 py-2 text-[#1E293B] hover:text-[#F59E0B] hover:bg-gray-50 transition-colors duration-200 font-medium"
+                                onClick={() => setServicesDropdownOpen(false)}
+                                className="block px-4 py-2 text-[#0F2D52] hover:text-[#4FA9FF] hover:bg-gray-50 transition-colors duration-200 font-medium"
                                 role="menuitem"
                               >
                                 {service.label}
@@ -142,7 +141,7 @@ export default function Navbar() {
                       onMouseLeave={() => setProjectsDropdownOpen(false)}
                     >
                       <button
-                        className="flex items-center gap-1 text-[#1E293B] hover:text-[#F59E0B] transition-colors duration-300 font-medium text-base focus:outline-none focus:text-[#F59E0B]"
+                        className="flex items-center gap-1 text-[#0F2D52] hover:text-[#4FA9FF] transition-colors duration-300 font-medium text-base focus:outline-none focus:text-[#4FA9FF]"
                         aria-haspopup="true"
                         aria-expanded={projectsDropdownOpen}
                         aria-label="Projects menu"
@@ -164,7 +163,7 @@ export default function Navbar() {
                               <Link
                                 key={project.href}
                                 href={project.href}
-                                className="block px-4 py-2 text-[#1E293B] hover:text-[#F59E0B] hover:bg-gray-50 transition-colors duration-200 font-medium"
+                                className="block px-4 py-2 text-[#0F2D52] hover:text-[#4FA9FF] hover:bg-gray-50 transition-colors duration-200 font-medium"
                                 role="menuitem"
                               >
                                 {project.label}
@@ -177,7 +176,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={link.href}
-                      className="text-[#1E293B] hover:text-[#F59E0B] transition-colors duration-300 font-medium text-base focus:outline-none focus:text-[#F59E0B]"
+                      className="text-[#0F2D52] hover:text-[#4FA9FF] transition-colors duration-300 font-medium text-base focus:outline-none focus:text-[#4FA9FF]"
                     >
                       {link.label}
                     </Link>
@@ -194,7 +193,7 @@ export default function Navbar() {
               >
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-6 py-2.5 bg-[#F59E0B] text-white font-semibold rounded-lg shadow-md hover:bg-[#D97706] focus:outline-none focus:ring-2 focus:ring-[#F59E0B] focus:ring-offset-2 transition-all duration-300"
+                  className="inline-flex items-center justify-center px-6 py-2.5 bg-[#4FA9FF] text-white font-semibold rounded-lg shadow-md hover:bg-[#3D8FE0] focus:outline-none focus:ring-2 focus:ring-[#4FA9FF] focus:ring-offset-2 transition-all duration-300"
                 >
                   Get a Quote
                 </Link>
@@ -203,7 +202,7 @@ export default function Navbar() {
 
             <button
               type="button"
-              className="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg text-[#1E293B] hover:text-[#F59E0B] hover:bg-gray-50 focus:outline-none focus:text-[#F59E0B]"
+              className="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg text-[#0F2D52] hover:text-[#4FA9FF] hover:bg-gray-50 focus:outline-none focus:text-[#4FA9FF]"
               onClick={toggleMobileMenu}
               aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileMenuOpen}
@@ -240,7 +239,7 @@ export default function Navbar() {
               <button
                 type="button"
                 onClick={toggleMobileMenu}
-                className="absolute top-4 right-4 p-2 rounded-lg text-[#1E293B] hover:text-[#F59E0B] hover:bg-gray-50 focus:outline-none"
+                className="absolute top-4 right-4 p-2 rounded-lg text-[#0F2D52] hover:text-[#4FA9FF] hover:bg-gray-50 focus:outline-none"
                 aria-label="Close menu"
               >
                 <X className="h-6 w-6" />
@@ -254,7 +253,7 @@ export default function Navbar() {
                         <button
                           type="button"
                           onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                          className="flex items-center justify-between text-lg font-medium text-[#1E293B] hover:text-[#F59E0B] transition-colors duration-200 py-2 focus:outline-none"
+                          className="flex items-center justify-between text-lg font-medium text-[#0F2D52] hover:text-[#4FA9FF] transition-colors duration-200 py-2 focus:outline-none"
                           aria-expanded={mobileServicesOpen}
                           aria-label="Toggle Services submenu"
                         >
@@ -281,7 +280,7 @@ export default function Navbar() {
                                     key={service.href}
                                     href={service.href}
                                     onClick={toggleMobileMenu}
-                                    className="text-base text-[#475569] hover:text-[#F59E0B] transition-colors duration-200 py-1"
+                                    className="text-base text-[#6B7280] hover:text-[#4FA9FF] transition-colors duration-200 py-1"
                                   >
                                     {service.label}
                                   </Link>
@@ -296,7 +295,7 @@ export default function Navbar() {
                         <button
                           type="button"
                           onClick={() => setMobileProjectsOpen(!mobileProjectsOpen)}
-                          className="flex items-center justify-between text-lg font-medium text-[#1E293B] hover:text-[#F59E0B] transition-colors duration-200 py-2 focus:outline-none"
+                          className="flex items-center justify-between text-lg font-medium text-[#0F2D52] hover:text-[#4FA9FF] transition-colors duration-200 py-2 focus:outline-none"
                           aria-expanded={mobileProjectsOpen}
                           aria-label="Toggle Projects submenu"
                         >
@@ -323,7 +322,7 @@ export default function Navbar() {
                                     key={project.href}
                                     href={project.href}
                                     onClick={toggleMobileMenu}
-                                    className="text-base text-[#475569] hover:text-[#F59E0B] transition-colors duration-200 py-1"
+                                    className="text-base text-[#6B7280] hover:text-[#4FA9FF] transition-colors duration-200 py-1"
                                   >
                                     {project.label}
                                   </Link>
@@ -337,7 +336,7 @@ export default function Navbar() {
                       <Link
                         href={link.href}
                         onClick={toggleMobileMenu}
-                        className="text-lg font-medium text-[#1E293B] hover:text-[#F59E0B] transition-colors duration-200 py-2 focus:outline-none"
+                        className="text-lg font-medium text-[#0F2D52] hover:text-[#4FA9FF] transition-colors duration-200 py-2 focus:outline-none"
                       >
                         {link.label}
                       </Link>
@@ -355,7 +354,7 @@ export default function Navbar() {
                   <Link
                     href="/contact"
                     onClick={toggleMobileMenu}
-                    className="inline-flex items-center justify-center w-full px-6 py-3 bg-[#F59E0B] text-white font-semibold rounded-lg shadow-md hover:bg-[#D97706] focus:outline-none focus:ring-2 focus:ring-[#F59E0B] transition-all duration-300"
+                    className="inline-flex items-center justify-center w-full px-6 py-3 bg-[#4FA9FF] text-white font-semibold rounded-lg shadow-md hover:bg-[#3D8FE0] focus:outline-none focus:ring-2 focus:ring-[#4FA9FF] transition-all duration-300"
                   >
                     Get a Quote
                   </Link>

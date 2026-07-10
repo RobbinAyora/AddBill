@@ -1,10 +1,10 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Inter, Montserrat } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
-const montserrat = Montserrat({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const poppins = Poppins({ subsets: ['latin'], weight: ['400','500','600','700','800'], variable: '--font-poppins' })
 
 export const metadata: Metadata = {
   title: 'Addbill Construction Solutions Limited',
@@ -43,8 +43,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" style={{ fontFamily: inter.style.fontFamily }}>
-      <body className="antialiased bg-background" style={{ fontFamily: inter.style.fontFamily }}>
+    <html lang="en" className={`scroll-smooth ${inter.variable} ${poppins.variable}`} style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif' }}>
+      <body className="antialiased bg-background font-sans" style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif' }}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

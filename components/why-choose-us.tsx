@@ -48,15 +48,15 @@ const stats = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="w-full bg-[#F9FAFB] py-20 md:py-24">
+    <section className="w-full bg-[#F7F9FC] py-20 md:py-24">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="inline-block h-1 w-12 bg-[#FFC72C] mb-4 rounded-full" />
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C] mb-4">
+          <span className="inline-block h-1 w-12 bg-[#4FA9FF] mb-4 rounded-full" />
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F2D52] mb-4">
             Why Choose Us
           </h2>
-          <p className="text-slate-600 text-base md:text-lg leading-relaxed">
+          <p className="text-[#6B7280] text-base md:text-lg leading-relaxed">
             We combine experience, reliability, and craftsmanship to deliver
             construction solutions you can trust from start to finish.
           </p>
@@ -71,13 +71,13 @@ export default function WhyChooseUs() {
                 key={reason.title}
                 className="group bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-[#2C2C2C] flex items-center justify-center mb-4 group-hover:bg-[#FFC72C] transition-colors duration-300">
-                  <Icon className="w-6 h-6 text-[#FFC72C] group-hover:text-[#2C2C2C] transition-colors duration-300" />
+                <div className="w-12 h-12 rounded-lg bg-[#0F2D52] flex items-center justify-center mb-4 group-hover:bg-[#4FA9FF] transition-colors duration-300">
+                  <Icon className="w-6 h-6 text-[#4FA9FF] group-hover:text-[#0F2D52] transition-colors duration-300" />
                 </div>
-                <h3 className="text-lg font-semibold text-[#2C2C2C] mb-2">
+                <h3 className="text-lg font-semibold text-[#0F2D52] mb-2">
                   {reason.title}
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
+                <p className="text-[#6B7280] text-sm leading-relaxed">
                   {reason.description}
                 </p>
               </div>
@@ -86,13 +86,13 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Stats bar */}
-        <div className="bg-[#2C2C2C] rounded-2xl px-8 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="bg-[#0F2D52] rounded-2xl px-8 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {stats.map((stat) => (
             <div key={stat.label}>
-              <div className="text-3xl md:text-4xl font-bold text-[#FFC72C] mb-1">
+              <div className="text-3xl md:text-4xl font-bold text-[#4FA9FF] mb-1">
                 {stat.value}
               </div>
-              <div className="text-gray-300 text-sm md:text-base">
+              <div className="text-sky-100 text-sm md:text-base">
                 {stat.label}
               </div>
             </div>

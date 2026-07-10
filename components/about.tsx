@@ -26,17 +26,17 @@ export default function About() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-lg"
         >
-          <span className="inline-block h-1 w-12 bg-[#FFC72C] mb-4 rounded-full" />
-          <h2 className="text-3xl md:text-4xl font-bold text-[#2C2C2C] mb-4">
+          <span className="inline-block h-1 w-12 bg-[#4FA9FF] mb-4 rounded-full" />
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F2D52] mb-4">
             About Addbill Construction Solutions
           </h2>
-          <p className="text-slate-600 text-base md:text-lg leading-relaxed mb-4">
+          <p className="text-[#6B7280] text-base md:text-lg leading-relaxed mb-4">
             At Addbill Construction Solutions Limited, we bring precision,
             reliability, and craftsmanship to every project. From foundation
             to finish, our team combines experience with modern construction
             practices to deliver results that stand the test of time.
           </p>
-          <p className="text-slate-600 text-base md:text-lg leading-relaxed">
+          <p className="text-[#6B7280] text-base md:text-lg leading-relaxed">
             We believe great construction is built on trust — trust in our
             process, our people, and our commitment to safety on every site.
           </p>

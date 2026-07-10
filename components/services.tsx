@@ -53,7 +53,7 @@ export default function Services() {
   }, []);
 
   return (
-    <section className="w-full py-20 md:py-24">
+    <section className="w-full bg-sky py-20 md:py-24">
       {/* Keep your existing background class/style on this <section> tag */}
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         {/* Left: Slideshow animation */}
@@ -76,7 +76,7 @@ export default function Services() {
                 onClick={() => setActiveIndex(i)}
                 aria-label={`Show ${services[i].title}`}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  i === activeIndex ? "w-6 bg-[#FFC72C]" : "w-2 bg-gray-300"
+                  i === activeIndex ? "w-6 bg-[#4FA9FF]" : "w-2 bg-[#D6E7F7]"
                 }`}
               />
             ))}
@@ -92,8 +92,8 @@ export default function Services() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="w-full"
         >
-          <span className="inline-block h-1 w-12 bg-[#FFC72C] mb-4 rounded-full" />
-          <h2 className="text-3xl md:text-4xl font-bold text-[#ffff] mb-8">
+          <span className="inline-block h-1 w-12 bg-[#4FA9FF] mb-4 rounded-full" />
+          <h2 className="text-3xl md:text-4xl font-bold text-[#0F2D52] mb-8">
             Our Services
           </h2>
 
@@ -107,26 +107,26 @@ export default function Services() {
                   onClick={() => setActiveIndex(i)}
                   className={`group flex items-start gap-4 p-5 rounded-xl border text-left transition-all duration-300 ${
                     isActive
-                      ? "border-[#FFC72C] bg-white shadow-md -translate-y-0.5"
+                      ? "border-[#4FA9FF] bg-white shadow-md -translate-y-0.5"
                       : "border-gray-200 bg-white shadow-sm hover:shadow-md hover:-translate-y-0.5"
                   }`}
                 >
                   <div
                     className={`flex-shrink-0 w-12 h-12 rounded-lg flex items-center justify-center transition-colors duration-300 ${
-                      isActive ? "bg-[#FFC72C]" : "bg-[#2C2C2C] group-hover:bg-[#FFC72C]"
+                      isActive ? "bg-[#4FA9FF]" : "bg-[#0F2D52] group-hover:bg-[#4FA9FF]"
                     }`}
                   >
                     <Icon
                       className={`w-6 h-6 transition-colors duration-300 ${
-                        isActive ? "text-[#2C2C2C]" : "text-[#FFC72C] group-hover:text-[#2C2C2C]"
+                        isActive ? "text-[#0F2D52]" : "text-[#4FA9FF] group-hover:text-[#0F2D52]"
                       }`}
                     />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-[#2C2C2C] mb-1">
+                    <h3 className="text-lg font-semibold text-[#0F2D52] mb-1">
                       {service.title}
                     </h3>
-                    <p className="text-slate-600 text-sm leading-relaxed">
+                    <p className="text-[#6B7280] text-sm leading-relaxed">
                       {service.description}
                     </p>
                   </div>
