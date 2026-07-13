@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import ServicesAnimation from "./services-animations";
-import { Building2, Shovel, Hammer, Home } from "lucide-react";
+import { Calculator, FileText, ClipboardCheck, TrendingUp } from "lucide-react";
 
 const slideLeft = {
   initial: { opacity: 0, x: -80 },
@@ -17,28 +17,28 @@ const slideRight = {
 
 const services = [
   {
-    icon: Building2,
-    title: "General Contracting",
+    icon: Calculator,
+    title: "Cost Estimation & Budgeting",
     description:
-      "End-to-end project management from planning to completion, ensuring quality, safety, and timelines are met at every stage.",
+      "Detailed cost plans and bills of quantities prepared from drawings and specifications, giving clients accurate budgets before construction begins.",
   },
   {
-    icon: Shovel,
-    title: "Excavation",
+    icon: FileText,
+    title: "Tendering & Procurement",
     description:
-      "Precise site preparation and earthmoving services using modern equipment to lay the groundwork for any project.",
+      "Preparation of tender documents, evaluation of contractor bids, and expert advice on the most suitable procurement route for your project.",
   },
   {
-    icon: Hammer,
-    title: "Foundation",
+    icon: ClipboardCheck,
+    title: "Contract Administration",
     description:
-      "Solid, code-compliant foundations built to support structures of any scale, from residential to commercial developments.",
+      "Management of construction contracts from award to completion, ensuring compliance, timely certification, and smooth communication between all parties.",
   },
   {
-    icon: Home,
-    title: "Roofing",
+    icon: TrendingUp,
+    title: "Project Valuation & Cost Control",
     description:
-      "Durable, weather-resistant roofing solutions installed with precision to protect your investment for years to come.",
+      "Ongoing measurement of work completed, interim payment certification, and continuous cost monitoring to keep your project on budget.",
   },
 ];
 
@@ -54,9 +54,7 @@ export default function Services() {
 
   return (
     <section className="w-full bg-sky py-20 md:py-24">
-      {/* Keep your existing background class/style on this <section> tag */}
       <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        {/* Left: Slideshow animation */}
         <motion.div
           variants={slideLeft}
           initial="initial"
@@ -68,7 +66,6 @@ export default function Services() {
           <div className="bg-gray-50 border border-gray-200 rounded-2xl shadow-md w-full aspect-[4/3] flex items-center justify-center overflow-hidden">
             <ServicesAnimation activeIndex={activeIndex} />
           </div>
-          {/* Dot indicators */}
           <div className="flex gap-2 mt-4">
             {services.map((_, i) => (
               <button
@@ -83,7 +80,6 @@ export default function Services() {
           </div>
         </motion.div>
 
-        {/* Right: Services list */}
         <motion.div
           variants={slideRight}
           initial="initial"

@@ -109,7 +109,7 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-clip">
       <Navbar />
 
       {/* 1. Hero / Intro Banner */}

@@ -1,49 +1,49 @@
-﻿import { ShieldCheck, Clock, Users, Award, Wrench, ThumbsUp } from "lucide-react";
+﻿import { ShieldCheck, Calculator, Clock, Users, FileCheck, ThumbsUp } from "lucide-react";
 
 const reasons = [
   {
-    icon: Award,
-    title: "Proven Experience",
+    icon: Calculator,
+    title: "Accurate Cost Estimates",
     description:
-      "Years of hands-on expertise delivering residential and commercial projects across the region.",
+      "Detailed, reliable cost plans and bills of quantities that keep your project financially sound from day one.",
   },
   {
     icon: ShieldCheck,
-    title: "Licensed & Insured",
+    title: "Licensed & Accredited",
     description:
-      "Fully licensed, bonded, and insured — giving you complete peace of mind on every project.",
+      "Fully licensed and registered quantity surveying practice, giving you complete confidence in every valuation and certificate.",
   },
   {
     icon: Clock,
-    title: "On-Time Delivery",
+    title: "Timely Reporting",
     description:
-      "We plan meticulously and execute efficiently to keep every project on schedule.",
+      "Prompt cost reports, valuations, and payment certificates so your project's finances never fall behind schedule.",
   },
   {
     icon: Users,
-    title: "Skilled Workforce",
+    title: "Experienced Team",
     description:
-      "A team of trained, experienced professionals committed to craftsmanship and safety.",
+      "A team of qualified quantity surveyors with hands-on experience across residential, commercial, and public sector projects.",
   },
   {
-    icon: Wrench,
-    title: "Quality Materials",
+    icon: FileCheck,
+    title: "Rigorous Contract Oversight",
     description:
-      "We use durable, industry-standard materials to ensure every build stands the test of time.",
+      "Meticulous contract administration that protects your interests and ensures compliance at every stage.",
   },
   {
     icon: ThumbsUp,
-    title: "Client Satisfaction",
+    title: "Client-Focused Service",
     description:
-      "Transparent communication and dedicated support from consultation through project handover.",
+      "Transparent communication and dedicated support from feasibility through final account.",
   },
 ];
 
 const stats = [
-  { value: "50+", label: "Projects Completed" },
+  { value: "50+", label: "Projects Costed" },
   { value: "10+", label: "Years in Business" },
   { value: "100%", label: "Client Satisfaction" },
-  { value: "24/7", label: "Site Support" },
+  { value: "KES 1B+", label: "Value Managed" },
 ];
 
 export default function WhyChooseUs() {
@@ -57,8 +57,9 @@ export default function WhyChooseUs() {
             Why Choose Us
           </h2>
           <p className="text-[#6B7280] text-base md:text-lg leading-relaxed">
-            We combine experience, reliability, and craftsmanship to deliver
-            construction solutions you can trust from start to finish.
+            We combine technical expertise, precision, and transparency to
+            help clients plan, cost, and deliver construction projects with
+            confidence.
           </p>
         </div>
 

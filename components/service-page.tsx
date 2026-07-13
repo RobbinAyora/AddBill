@@ -38,7 +38,7 @@ export default function ServicePage({ slug }: { slug: string }) {
   const related = services.filter((s) => s.slug !== service.slug)
 
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-clip">
       {/* a. Hero */}
       <section className="relative min-h-[78vh] flex items-center overflow-hidden">
         <Image

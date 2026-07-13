@@ -5,6 +5,7 @@ import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { Menu, X, ChevronDown } from "lucide-react"
+import LogoACS from "@/components/logo-acs"
 
 const services = [
   { href: "/services/cost-estimation", label: "Cost Estimation & Budgeting" },
@@ -80,16 +81,14 @@ export default function Navbar() {
           aria-label="Main navigation"
         >
           <div className="flex items-center justify-between h-16 lg:h-20">
-            <Link href="/" className="flex-shrink-0 group" aria-label="Addbill Home">
-              <span className="text-2xl lg:text-3xl font-extrabold tracking-tight">
-                <span className="text-[#0F2D52] transition-colors duration-300 group-hover:text-[#4FA9FF]">
-                  Add
-                </span>
-                <span className="text-[#4FA9FF] transition-colors duration-300 group-hover:text-[#0F2D52]">
-                  bill
-                </span>
-              </span>
-            </Link>
+                     <div className="flex items-center gap-3 mb-5">
+            
+                                        <LogoACS variant="default" size={40} />
+            
+                                        <h3 className="text-3xl font-black">
+                                            Add<span className="text-[#4FA9FF]">bill</span>
+                                        </h3>
+                                    </div>
 
             <div className="hidden lg:flex lg:items-center lg:space-x-8 xl:space-x-10">
               {navLinks.map((link) => (
@@ -344,6 +343,16 @@ export default function Navbar() {
                   </div>
                 ))}
               </nav>
+
+              <div className="mt-4">
+                <Link
+                  href="/add-bill"
+                  onClick={toggleMobileMenu}
+                  className="inline-flex items-center justify-center w-full px-6 py-3 bg-[#0F2D52] text-white font-semibold rounded-lg shadow-md hover:bg-[#0A1F38] focus:outline-none focus:ring-2 focus:ring-[#4FA9FF] transition-all duration-300"
+                >
+                  AddBill
+                </Link>
+              </div>
 
               <div className="mt-auto pt-6">
                 <motion.div

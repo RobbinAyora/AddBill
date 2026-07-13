@@ -12,6 +12,7 @@ import {
     Clock,
     ArrowRight,
 } from "lucide-react";
+import LogoACS from "@/components/logo-acs"
 
 const footerVariants = {
     hidden: { opacity: 0, y: 60 },
@@ -101,10 +102,7 @@ export default function Footer() {
                     <motion.div variants={itemVariants}>
                         <div className="flex items-center gap-3 mb-5">
 
-                            <Building2
-                                className="text-[#4FA9FF]"
-                                size={34}
-                            />
+                            <LogoACS variant="inverse" size={40} />
 
                             <h3 className="text-3xl font-black">
                                 Add<span className="text-[#4FA9FF]">bill</span>

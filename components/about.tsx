@@ -31,14 +31,18 @@ export default function About() {
             About Addbill Construction Solutions
           </h2>
           <p className="text-[#6B7280] text-base md:text-lg leading-relaxed mb-4">
-            At Addbill Construction Solutions Limited, we bring precision,
-            reliability, and craftsmanship to every project. From foundation
-            to finish, our team combines experience with modern construction
-            practices to deliver results that stand the test of time.
+            Addbill Construction Solutions Limited is a professional quantity
+            surveying firm dedicated to helping clients plan, control, and
+            deliver construction projects with confidence. From accurate cost
+            estimation to contract administration, we provide the technical
+            expertise that keeps projects on budget and on track.
           </p>
           <p className="text-[#6B7280] text-base md:text-lg leading-relaxed">
-            We believe great construction is built on trust — trust in our
-            process, our people, and our commitment to safety on every site.
+            Our team combines industry experience with meticulous attention
+            to detail, guiding clients through tendering, procurement, and
+            project valuation with transparency at every stage. We believe
+            sound cost management is the foundation of every successful
+            build.
           </p>
         </motion.div>
 

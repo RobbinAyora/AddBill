@@ -169,7 +169,7 @@ export default function AboutPage() {
   const [openExpertise, setOpenExpertise] = useState<number | null>(0)
 
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-clip">
       <Navbar />
 
       {/* 1. Hero Banner */}
