@@ -97,7 +97,7 @@ export const services: Service[] = [
 
     {
       title: "Programme Management",
-      description: "Monitoring project schedules, milestones, activities, and progress to keep works on track."
+      description: "Monitoring construction project schedules, milestones, activities, and progress to keep works on track."
     },
 
     {

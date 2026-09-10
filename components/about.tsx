@@ -32,8 +32,8 @@ export default function About() {
           </h2>
         
 <p className="text-[#6B7280] text-base md:text-lg leading-relaxed mb-4">
-  Addbill Construction Solutions Limited is a professional quantity surveying
-  and project management company committed to helping clients plan, manage, and
+  Addbill Construction Solutions Limited is a professional Quantity Surveying
+  and Construction Project Management company committed to helping clients plan, manage, and
   deliver construction projects successfully. We provide reliable cost
   management, project planning, budgeting, and contract administration services
   that help clients make informed decisions and achieve greater value from

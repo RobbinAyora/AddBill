@@ -222,7 +222,7 @@ export default function AboutPage() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.25 }}
             className="text-base sm:text-lg lg:text-xl text-white/90 max-w-2xl leading-relaxed drop-shadow-md"
           >
-            Building confidence through precise quantity surveying — helping
+            Building confidence through precise quantity surveying and construction project management — helping
             projects stay on budget, on time, and built to last.
           </motion.p>
         </div>
@@ -422,7 +422,7 @@ export default function AboutPage() {
               Our Expertise
             </h2>
             <p className="text-[#6B7280] text-base md:text-lg leading-relaxed">
-              End-to-end quantity surveying services that keep your project
+              End-to-end Quantity Surveying and Construction Project Management services that keep your project
               financially in control.
             </p>
           </motion.div>
