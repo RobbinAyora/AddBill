@@ -15,15 +15,15 @@ const slides = [
   },
   {
     image: "/construction-2.png",
-    heading: "Expert Tendering & Procurement",
+    heading: "Expert Tendering ",
     subheading: "Guiding clients through tender preparation and contractor selection with clarity and confidence.",
     button: "Our Services",
     buttonLink: "/services",
   },
   {
     image: "/construction-3.png",
-    heading: "Trusted Contract Administration",
-    subheading: "Managing construction contracts from award to completion, protecting your interests at every stage.",
+    heading: "Project Planning",
+    subheading: "We provide comprehensive project planning services that turn construction concepts into well-structured, achievable plans.",
     button: "Learn More",
     buttonLink: "/about",
   },

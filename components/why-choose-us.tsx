@@ -27,9 +27,9 @@ const reasons = [
   },
   {
     icon: FileCheck,
-    title: "Rigorous Contract Oversight",
+    title: "Project Planning",
     description:
-      "Meticulous contract administration that protects your interests and ensures compliance at every stage.",
+      "We provide comprehensive project planning services that turn construction concepts into well-structured, achievable plans.",
   },
   {
     icon: ThumbsUp,

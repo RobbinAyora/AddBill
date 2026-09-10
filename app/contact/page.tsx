@@ -410,6 +410,12 @@ export default function ContactPage() {
                       href: "tel:+254700123456",
                     },
                     {
+                      icon: Phone,
+                      label: "Phone",
+                      value: "+254 703923870",
+                      href: "tel:+254703923870",
+                    },
+                    {
                       icon: Mail,
                       label: "Email",
                       value: "info@addbill.com",

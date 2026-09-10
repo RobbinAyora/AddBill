@@ -30,20 +30,26 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F2D52] mb-4">
             About Addbill Construction Solutions
           </h2>
-          <p className="text-[#6B7280] text-base md:text-lg leading-relaxed mb-4">
-            Addbill Construction Solutions Limited is a professional quantity
-            surveying firm dedicated to helping clients plan, control, and
-            deliver construction projects with confidence. From accurate cost
-            estimation to contract administration, we provide the technical
-            expertise that keeps projects on budget and on track.
-          </p>
-          <p className="text-[#6B7280] text-base md:text-lg leading-relaxed">
-            Our team combines industry experience with meticulous attention
-            to detail, guiding clients through tendering, procurement, and
-            project valuation with transparency at every stage. We believe
-            sound cost management is the foundation of every successful
-            build.
-          </p>
+         ```jsx
+<p className="text-[#6B7280] text-base md:text-lg leading-relaxed mb-4">
+  Addbill Construction Solutions Limited is a professional quantity surveying
+  and project planning company committed to helping clients plan, manage, and
+  deliver construction projects successfully. We provide reliable cost
+  management, project planning, budgeting, and contract administration services
+  that help clients make informed decisions and achieve greater value from
+  their investments.
+</p>
+
+<p className="text-[#6B7280] text-base md:text-lg leading-relaxed">
+  From project inception and feasibility through procurement, construction, and
+  completion, we combine technical expertise, careful planning, and attention
+  to detail to keep projects within budget, on schedule, and aligned with
+  their objectives. Our goal is to provide transparent, practical, and
+  professional solutions that give our clients confidence at every stage of
+  their project.
+</p>
+```
+
         </motion.div>
 
         {/* Right: Illustrated Card */}

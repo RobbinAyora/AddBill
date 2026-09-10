@@ -22,7 +22,7 @@ export default function Page() {
       <WhyChooseUs />
     
       <Footer />
-      <ScrollToTop />
+      
     </main>
   )
 }

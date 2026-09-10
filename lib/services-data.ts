@@ -75,31 +75,83 @@ export const services: Service[] = [
     ],
   },
   {
-    slug: "contract-administration",
-    name: "Contract Administration",
-    tagline: "Sound contract management that keeps obligations, risks, and payments in order.",
-    icon: FileSignature,
-    overview: [
-      "A well-administered contract is what keeps a project fair, documented, and dispute-free. Addbill acts as your impartial contract administrator — managing the day-to-day commercial relationship between client and contractor.",
-      "We handle variations, assess claims, certify interim payments, and keep a clear audit trail of decisions and instructions. Every obligation and risk is recorded, so both parties understand where they stand at all times.",
-      "By administering contracts professionally, we protect your interests, maintain cash-flow discipline, and significantly reduce the likelihood of costly disputes, delays, or adversarial relationships on site.",
-    ],
-    included: [
-      { title: "Contract Setup", description: "Review and setup of contract conditions, roles, and responsibilities." },
-      { title: "Variation Management", description: "Assessment, agreement, and recording of changes to scope." },
-      { title: "Payment Certification", description: "Independent certification of interim and final payments." },
-      { title: "Claims Assessment", description: "Objective review of extension-of-time and loss/expense claims." },
-      { title: "Site Instructions", description: "Issuing and logging instructions with full traceability." },
-      { title: "Dispute Prevention", description: "Proactive records and dialogue that head off disagreements." },
-    ],
-    process: [
-      { title: "Mobilise", description: "We confirm contract terms, responsibilities, and reporting lines at start." },
-      { title: "Administer Daily", description: "We issue instructions, log records, and manage variations as they arise." },
-      { title: "Certify Payments", description: "We assess and certify valuations on the agreed payment cycle." },
-      { title: "Manage Claims", description: "We evaluate time and cost claims with supporting evidence." },
-      { title: "Close Out", description: "We finalise accounts and hand over a complete contract record." },
-    ],
-  },
+  slug: "project-planning",
+  name: "Project Planning",
+  tagline: "Strategic planning that keeps construction projects on time, within budget, and aligned with their objectives.",
+  icon: FileSignature,
+
+  overview: [
+    "Effective project planning provides the foundation for a successful construction project. Addbill helps clients establish clear project objectives, scope, budgets, timelines, and delivery strategies before work begins.",
+
+    "We develop practical project plans that coordinate costs, resources, procurement, activities, and key milestones. By identifying potential risks and project constraints early, we help clients make informed decisions and avoid unnecessary delays and cost overruns.",
+
+    "From initial feasibility and project definition through procurement and construction, our structured planning approach provides the control and direction needed to keep projects progressing efficiently and achieve the desired outcomes."
+  ],
+
+  included: [
+    {
+      title: "Project Feasibility",
+      description: "Assessment of project requirements, objectives, constraints, and overall viability."
+    },
+
+    {
+      title: "Scope Definition",
+      description: "Establishing clear project scope, deliverables, responsibilities, and performance requirements."
+    },
+
+    {
+      title: "Cost & Budget Planning",
+      description: "Development of realistic project budgets and cost plans to support financial control."
+    },
+
+    {
+      title: "Programme Development",
+      description: "Preparation of project schedules, milestones, activities, and target completion dates."
+    },
+
+    {
+      title: "Resource Planning",
+      description: "Coordination and planning of labour, materials, equipment, and other project resources."
+    },
+
+    {
+      title: "Risk Management",
+      description: "Identification of potential risks and development of practical strategies to minimize their impact."
+    }
+  ],
+
+  process: [
+    {
+      title: "Define",
+      description: "We establish the project objectives, scope, requirements, stakeholders, and expected outcomes."
+    },
+
+    {
+      title: "Assess",
+      description: "We evaluate feasibility, costs, resources, risks, and potential constraints before implementation."
+    },
+
+    {
+      title: "Plan",
+      description: "We develop the project budget, programme, procurement strategy, milestones, and delivery plan."
+    },
+
+    {
+      title: "Coordinate",
+      description: "We coordinate project activities, resources, and stakeholders to maintain alignment throughout delivery."
+    },
+
+    {
+      title: "Monitor",
+      description: "We track progress against planned costs, timelines, milestones, and objectives and recommend corrective action where necessary."
+    },
+
+    {
+      title: "Deliver",
+      description: "We support the project through completion, ensuring the planned objectives are achieved efficiently and effectively."
+    }
+  ],
+},
   {
     slug: "project-valuation",
     name: "Project Valuation",

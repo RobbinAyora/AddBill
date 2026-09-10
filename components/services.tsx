@@ -24,15 +24,15 @@ const services = [
   },
   {
     icon: FileText,
-    title: "Tendering & Procurement",
+    title: "Tendering",
     description:
       "Preparation of tender documents, evaluation of contractor bids, and expert advice on the most suitable procurement route for your project.",
   },
   {
     icon: ClipboardCheck,
-    title: "Contract Administration",
+    title: "Project Planning",
     description:
-      "Management of construction contracts from award to completion, ensuring compliance, timely certification, and smooth communication between all parties.",
+      "Comprehensive project planning services that turn construction concepts into well-structured, achievable plans.",
   },
   {
     icon: TrendingUp,

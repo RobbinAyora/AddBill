@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { MessageCircle, X, Send } from 'lucide-react'
 import { FaWhatsapp } from 'react-icons/fa'
 
-const WHATSAPP_URL = 'https://wa.me/254795389867'
+const WHATSAPP_URL = 'https://wa.me/254721237714'
 const COMPANY_NAME = 'Addbill Construction Solutions'
 
 export default function FloatingActions() {
