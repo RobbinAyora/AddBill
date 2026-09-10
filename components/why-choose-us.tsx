@@ -27,9 +27,9 @@ const reasons = [
   },
   {
     icon: FileCheck,
-    title: "Project Planning",
+    title: "Project Management",
     description:
-      "We provide comprehensive project planning services that turn construction concepts into well-structured, achievable plans.",
+      "We provide comprehensive project management services that turn construction concepts into well-structured, achievable plans.",
   },
   {
     icon: ThumbsUp,

@@ -126,11 +126,11 @@ const expertise = [
   },
   {
     icon: FileSignature,
-    title: "Project Planning",
+    title: "Project Management",
     description:
-      "Comprehensive project planning services that turn construction concepts into well-structured, achievable plans.",
+      "Comprehensive project management services that turn construction concepts into well-structured, achievable plans.",
     details:
-      "We provide detailed project planning services that ensure construction projects are well-organized, resource-efficient, and aligned with client objectives from the outset.",
+      "We provide detailed project management services that ensure construction projects are well-organized, resource-efficient, and aligned with client objectives from the outset.",
   },
   {
     icon: LineChart,
@@ -246,7 +246,7 @@ export default function AboutPage() {
             <p className="text-[#6B7280] text-base md:text-lg leading-relaxed mb-4">
               Addbill Construction Solutions Limited was founded on a simple
               belief: great buildings begin with great numbers. We started as a
-              small quantity surveying and project planning practice driven by the conviction that
+              small quantity surveying and project management practice driven by the conviction that
               careful cost planning protects both clients and the quality of the
               work itself.
             </p>
@@ -643,3 +643,45 @@ export default function AboutPage() {
     </main>
   )
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

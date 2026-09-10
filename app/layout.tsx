@@ -1,11 +1,11 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Inter, Poppins } from 'next/font/google'
+import { Inter, Playfair_Display } from 'next/font/google'
 import './globals.css'
 import FloatingActions from '@/components/FloatingActions'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const poppins = Poppins({ subsets: ['latin'], weight: ['400','500','600','700','800'], variable: '--font-poppins' })
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', weight: ['400', '500', '600', '700', '800', '900'] })
+const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair', weight: ['400', '500', '600', '700'], display: 'swap' })
 
 export const metadata: Metadata = {
   title: 'Addbill Construction Solutions Limited',
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`scroll-smooth ${inter.variable} ${poppins.variable}`} style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif' }}>
+    <html lang="en" className={`scroll-smooth ${inter.variable} ${playfair.variable}`} style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif' }}>
       <body className="antialiased bg-background font-sans" style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif' }}>
         {children}
         <FloatingActions />

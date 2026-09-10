@@ -426,9 +426,9 @@ export default function ContactPage() {
                       label: "Business Hours",
                       value: "Mon – Fri: 8:00 AM – 6:00 PM",
                     },
-                  ].map((item) => (
+                  ].map((item, index) => (
                     <div
-                      key={item.label}
+                      key={`${item.label}-${index}`}
                       className="flex items-start gap-4 p-5 rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-all duration-300"
                     >
                       <div className="shrink-0 w-12 h-12 rounded-lg bg-[#0F2D52] flex items-center justify-center">
