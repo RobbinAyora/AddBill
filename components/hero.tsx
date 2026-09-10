@@ -22,8 +22,8 @@ const slides = [
   },
   {
     image: "/construction-3.png",
-    heading: "Project Planning",
-    subheading: "We provide comprehensive project planning services that turn construction concepts into well-structured, achievable plans.",
+    heading: "Project Management",
+    subheading: "We provide comprehensive project management services that turn construction concepts into well-structured, achievable plans.",
     button: "Learn More",
     buttonLink: "/about",
   },

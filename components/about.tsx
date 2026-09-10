@@ -30,10 +30,10 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold text-[#0F2D52] mb-4">
             About Addbill Construction Solutions
           </h2>
-         ```jsx
+        
 <p className="text-[#6B7280] text-base md:text-lg leading-relaxed mb-4">
   Addbill Construction Solutions Limited is a professional quantity surveying
-  and project planning company committed to helping clients plan, manage, and
+  and project management company committed to helping clients plan, manage, and
   deliver construction projects successfully. We provide reliable cost
   management, project planning, budgeting, and contract administration services
   that help clients make informed decisions and achieve greater value from

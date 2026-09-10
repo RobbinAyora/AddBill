@@ -10,7 +10,7 @@ import LogoACS from "@/components/logo-acs"
 const services = [
   { href: "/services/cost-estimation", label: "Cost Estimation & Budgeting" },
   { href: "/services/tendering-procurement", label: "Tendering & Procurement" },
-  { href: "/services/contract-administration", label: "Contract Administration" },
+  { href: "/services/project-management", label: "Project Management" },
   { href: "/services/project-valuation", label: "Project Valuation" },
   { href: "/services/cost-control", label: "Cost Control & Monitoring" },
 ]

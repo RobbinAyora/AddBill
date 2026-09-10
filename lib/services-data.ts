@@ -74,81 +74,82 @@ export const services: Service[] = [
       { title: "Award & Mobilise", description: "We support appointment and hand over a clean start to the contract." },
     ],
   },
-  {
-  slug: "project-planning",
-  name: "Project Planning",
-  tagline: "Strategic planning that keeps construction projects on time, within budget, and aligned with their objectives.",
+ 
+{
+  slug: "project-management",
+  name: "Project Management",
+  tagline: "Professional project management that keeps construction work coordinated, controlled, and successfully delivered.",
   icon: FileSignature,
 
   overview: [
-    "Effective project planning provides the foundation for a successful construction project. Addbill helps clients establish clear project objectives, scope, budgets, timelines, and delivery strategies before work begins.",
+    "Effective project management brings together people, resources, costs, timelines, and activities to ensure construction projects are delivered according to the client's objectives. Addbill provides professional management and coordination throughout the project lifecycle.",
 
-    "We develop practical project plans that coordinate costs, resources, procurement, activities, and key milestones. By identifying potential risks and project constraints early, we help clients make informed decisions and avoid unnecessary delays and cost overruns.",
+    "We coordinate contractors, consultants, suppliers, and other project stakeholders while monitoring progress, costs, quality, programme performance, and compliance with agreed project requirements. Our structured approach helps identify issues early and ensures timely corrective action.",
 
-    "From initial feasibility and project definition through procurement and construction, our structured planning approach provides the control and direction needed to keep projects progressing efficiently and achieve the desired outcomes."
+    "From project commencement through construction and final handover, we provide consistent oversight and coordination to minimize delays, control costs, manage risks, and maintain clear communication between all parties involved."
   ],
 
   included: [
     {
-      title: "Project Feasibility",
-      description: "Assessment of project requirements, objectives, constraints, and overall viability."
+      title: "Project Coordination",
+      description: "Coordination of contractors, consultants, suppliers, and stakeholders to ensure smooth project execution."
     },
 
     {
-      title: "Scope Definition",
-      description: "Establishing clear project scope, deliverables, responsibilities, and performance requirements."
+      title: "Programme Management",
+      description: "Monitoring project schedules, milestones, activities, and progress to keep works on track."
     },
 
     {
-      title: "Cost & Budget Planning",
-      description: "Development of realistic project budgets and cost plans to support financial control."
+      title: "Cost Control",
+      description: "Monitoring project expenditure and commitments to help maintain financial control and minimize cost overruns."
     },
 
     {
-      title: "Programme Development",
-      description: "Preparation of project schedules, milestones, activities, and target completion dates."
-    },
-
-    {
-      title: "Resource Planning",
-      description: "Coordination and planning of labour, materials, equipment, and other project resources."
+      title: "Quality Management",
+      description: "Monitoring construction activities and deliverables against agreed specifications, standards, and project requirements."
     },
 
     {
       title: "Risk Management",
-      description: "Identification of potential risks and development of practical strategies to minimize their impact."
+      description: "Identifying project risks, assessing their potential impact, and implementing appropriate mitigation measures."
+    },
+
+    {
+      title: "Progress Monitoring & Reporting",
+      description: "Regular assessment and reporting of project progress, issues, costs, programme performance, and key milestones."
     }
   ],
 
   process: [
     {
-      title: "Define",
-      description: "We establish the project objectives, scope, requirements, stakeholders, and expected outcomes."
-    },
-
-    {
-      title: "Assess",
-      description: "We evaluate feasibility, costs, resources, risks, and potential constraints before implementation."
-    },
-
-    {
-      title: "Plan",
-      description: "We develop the project budget, programme, procurement strategy, milestones, and delivery plan."
+      title: "Initiate",
+      description: "We establish project objectives, responsibilities, communication channels, deliverables, and management procedures."
     },
 
     {
       title: "Coordinate",
-      description: "We coordinate project activities, resources, and stakeholders to maintain alignment throughout delivery."
+      description: "We coordinate project teams, contractors, consultants, suppliers, and stakeholders to maintain effective collaboration."
+    },
+
+    {
+      title: "Execute",
+      description: "We oversee the implementation of project activities while ensuring work progresses according to the approved plans and requirements."
     },
 
     {
       title: "Monitor",
-      description: "We track progress against planned costs, timelines, milestones, and objectives and recommend corrective action where necessary."
+      description: "We continuously monitor progress, costs, quality, risks, and programme performance and identify issues requiring attention."
     },
 
     {
-      title: "Deliver",
-      description: "We support the project through completion, ensuring the planned objectives are achieved efficiently and effectively."
+      title: "Control",
+      description: "We implement corrective measures, manage changes, address risks, and maintain control over time, cost, quality, and project scope."
+    },
+
+    {
+      title: "Handover",
+      description: "We coordinate completion, outstanding works, documentation, inspections, and final handover to the client."
     }
   ],
 },

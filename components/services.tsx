@@ -30,9 +30,9 @@ const services = [
   },
   {
     icon: ClipboardCheck,
-    title: "Project Planning",
+    title: "Project Management",
     description:
-      "Comprehensive project planning services that turn construction concepts into well-structured, achievable plans.",
+      "Comprehensive project management services that turn construction concepts into well-structured, achievable plans.",
   },
   {
     icon: TrendingUp,
