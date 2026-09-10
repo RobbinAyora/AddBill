@@ -152,14 +152,14 @@ const expertise = [
 
 const team = [
   {
-    name: "Jane Wanjiru",
-    title: "Principal Quantity Surveyor",
-    bio: "Leads cost strategy and major project oversight with 12+ years of industry experience.",
-    image: "/placeholder-user.jpg",
+    name: "Jelia Bosibori Ayora",
+    title: "Senior Quantity Surveyor",
+    bio: "Leads cost strategy and major project oversight with 15+ years of industry experience.",
+    image: "/jelia.jpeg",
   },
   {
-    name: "David Omondi",
-    title: "Senior Cost Consultant",
+    name: "Leila Nyabate Kariuki",
+    title: "Senior Quantity Surveyor",
     bio: "Specializes in tendering, procurement, and contract administration for complex builds.",
     image: "/placeholder-user.jpg",
   },
