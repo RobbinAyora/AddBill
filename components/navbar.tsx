@@ -1,66 +1,135 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { motion, AnimatePresence } from "framer-motion"
-import { cn } from "@/lib/utils"
-import { Menu, X, ChevronDown } from "lucide-react"
-import LogoACS from "@/components/logo-acs"
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { Menu, X, ChevronDown } from "lucide-react";
+import LogoACS from "@/components/logo-acs";
 
 const services = [
-  { href: "/services/cost-estimation", label: "Cost Estimation & Budgeting" },
-  { href: "/services/tendering-procurement", label: "Tendering & Procurement" },
-  { href: "/services/project-management", label: "Project Management" },
-  { href: "/services/project-valuation", label: "Project Valuation" },
-  { href: "/services/cost-control", label: "Cost Control & Monitoring" },
-]
+  {
+    href: "/services/cost-estimation",
+    label: "Cost Estimation & Budgeting",
+  },
+  {
+    href: "/services/tendering-procurement",
+    label: "Tendering & Procurement",
+  },
+  {
+    href: "/services/project-management",
+    label: "Project Management",
+  },
+  {
+    href: "/services/project-valuation",
+    label: "Project Valuation",
+  },
+  {
+    href: "/services/cost-control",
+    label: "Cost Control & Monitoring",
+  },
+];
 
+/*
+ * Projects now connect directly to the Projects
+ * section on the homepage.
+ */
 const projects = [
-  { href: "/projects/residential", label: "Residential Projects" },
-  { href: "/projects/commercial", label: "Commercial Projects" },
-  { href: "/projects/institutional", label: "Institutional Projects" },
-  { href: "/projects/infrastructure", label: "Infrastructure Projects" },
-  { href: "/projects/renovations", label: "Renovation Projects" },
-  { href: "/projects/design", label: "Design Portfolio" },
-]
+  {
+    href: "/projects/?category=residential#projects",
+    label: "Residential Projects",
+  },
+  {
+    href: "/projects/?category=commercial#projects",
+    label: "Commercial Projects",
+  },
+  {
+    href: "/projects/?category=institutional#projects",
+    label: "Institutional Projects",
+  },
+  {
+    href: "/projects/?category=infrastructure#projects",
+    label: "Infrastructure Projects",
+  },
+  {
+    href: "/projects/?category=renovation#projects",
+    label: "Renovation Projects",
+  },
+  {
+    href: "/#projects",
+    label: "Design Portfolio",
+  },
+];
 
 const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/projects", label: "Projects" },
-  { href: "/contact", label: "Contact" },
-]
+  {
+    href: "/",
+    label: "Home",
+  },
+  {
+    href: "/about",
+    label: "About",
+  },
+  {
+    href: "/services",
+    label: "Services",
+  },
+  {
+    href: "/#projects",
+    label: "Projects",
+  },
+  {
+    href: "/contact",
+    label: "Contact",
+  },
+];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false)
-  const [projectsDropdownOpen, setProjectsDropdownOpen] = useState(false)
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false)
-  const [mobileProjectsOpen, setMobileProjectsOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] =
+    useState(false);
+
+  const [servicesDropdownOpen, setServicesDropdownOpen] =
+    useState(false);
+
+  const [projectsDropdownOpen, setProjectsDropdownOpen] =
+    useState(false);
+
+  const [mobileServicesOpen, setMobileServicesOpen] =
+    useState(false);
+
+  const [mobileProjectsOpen, setMobileProjectsOpen] =
+    useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 60)
-    }
+      setScrolled(window.scrollY > 60);
+    };
 
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+
+    return () =>
+      window.removeEventListener(
+        "scroll",
+        handleScroll
+      );
+  }, []);
 
   useEffect(() => {
     if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden"
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = ""
+      document.body.style.overflow = "";
     }
-    return () => {
-      document.body.style.overflow = ""
-    }
-  }, [mobileMenuOpen])
 
-  const toggleMobileMenu = () => setMobileMenuOpen(!mobileMenuOpen)
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileMenuOpen]);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  };
 
   return (
     <>
@@ -81,98 +150,163 @@ export default function Navbar() {
           aria-label="Main navigation"
         >
           <div className="flex items-center justify-between h-16 lg:h-20">
-                     <div className="flex items-center gap-3 mb-5">
-            
-                                        <LogoACS variant="default" size={40} />
-            
-                                        <h3 className="text-3xl font-black">
-                                            Add<span className="text-[#4FA9FF]">bill</span>
-                                        </h3>
-                                    </div>
 
+            {/* Logo */}
+            <div className="flex items-center gap-3 mb-5">
+              <LogoACS
+                variant="default"
+                size={40}
+              />
+
+              <h3 className="text-3xl font-black">
+                Add
+                <span className="text-[#4FA9FF]">
+                  bill
+                </span>
+              </h3>
+            </div>
+
+            {/* Desktop Navigation */}
             <div className="hidden lg:flex lg:items-center lg:space-x-8 xl:space-x-10">
               {navLinks.map((link) => (
-                <div key={link.href} className="relative">
+                <div
+                  key={link.href}
+                  className="relative"
+                >
+                  {/* Services */}
                   {link.label === "Services" ? (
                     <div
                       className="relative"
-                      onMouseEnter={() => setServicesDropdownOpen(true)}
-                      onMouseLeave={() => setServicesDropdownOpen(false)}
+                      onMouseEnter={() =>
+                        setServicesDropdownOpen(true)
+                      }
+                      onMouseLeave={() =>
+                        setServicesDropdownOpen(false)
+                      }
                     >
                       <button
                         className="flex items-center gap-1 text-[#0F2D52] hover:text-[#4FA9FF] transition-colors duration-300 font-medium text-base focus:outline-none focus:text-[#4FA9FF]"
                         aria-haspopup="true"
-                        aria-expanded={servicesDropdownOpen}
+                        aria-expanded={
+                          servicesDropdownOpen
+                        }
                         aria-label="Services menu"
                       >
                         Services
+
                         <ChevronDown className="h-4 w-4" />
                       </button>
+
                       <AnimatePresence>
                         {servicesDropdownOpen && (
                           <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -10 }}
-                            transition={{ duration: 0.2 }}
+                            initial={{
+                              opacity: 0,
+                              y: -10,
+                            }}
+                            animate={{
+                              opacity: 1,
+                              y: 0,
+                            }}
+                            exit={{
+                              opacity: 0,
+                              y: -10,
+                            }}
+                            transition={{
+                              duration: 0.2,
+                            }}
                             className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-100 py-2"
                             role="menu"
                           >
-                            {services.map((service) => (
-                              <Link
-                                key={service.href}
-                                href={service.href}
-                                onClick={() => setServicesDropdownOpen(false)}
-                                className="block px-4 py-2 text-[#0F2D52] hover:text-[#4FA9FF] hover:bg-gray-50 transition-colors duration-200 font-medium"
-                                role="menuitem"
-                              >
-                                {service.label}
-                              </Link>
-                            ))}
+                            {services.map(
+                              (service) => (
+                                <Link
+                                  key={service.href}
+                                  href={service.href}
+                                  onClick={() =>
+                                    setServicesDropdownOpen(
+                                      false
+                                    )
+                                  }
+                                  className="block px-4 py-2 text-[#0F2D52] hover:text-[#4FA9FF] hover:bg-gray-50 transition-colors duration-200 font-medium"
+                                  role="menuitem"
+                                >
+                                  {service.label}
+                                </Link>
+                              )
+                            )}
                           </motion.div>
                         )}
                       </AnimatePresence>
                     </div>
                   ) : link.label === "Projects" ? (
+                    /* Projects */
                     <div
                       className="relative"
-                      onMouseEnter={() => setProjectsDropdownOpen(true)}
-                      onMouseLeave={() => setProjectsDropdownOpen(false)}
+                      onMouseEnter={() =>
+                        setProjectsDropdownOpen(true)
+                      }
+                      onMouseLeave={() =>
+                        setProjectsDropdownOpen(false)
+                      }
                     >
                       <button
                         className="flex items-center gap-1 text-[#0F2D52] hover:text-[#4FA9FF] transition-colors duration-300 font-medium text-base focus:outline-none focus:text-[#4FA9FF]"
                         aria-haspopup="true"
-                        aria-expanded={projectsDropdownOpen}
+                        aria-expanded={
+                          projectsDropdownOpen
+                        }
                         aria-label="Projects menu"
                       >
                         Projects
+
                         <ChevronDown className="h-4 w-4" />
                       </button>
+
                       <AnimatePresence>
                         {projectsDropdownOpen && (
                           <motion.div
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -10 }}
-                            transition={{ duration: 0.2 }}
+                            initial={{
+                              opacity: 0,
+                              y: -10,
+                            }}
+                            animate={{
+                              opacity: 1,
+                              y: 0,
+                            }}
+                            exit={{
+                              opacity: 0,
+                              y: -10,
+                            }}
+                            transition={{
+                              duration: 0.2,
+                            }}
                             className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-md rounded-lg shadow-xl border border-gray-100 py-2"
                             role="menu"
                           >
-                            {projects.map((project) => (
-                              <Link
-                                key={project.href}
-                                href={project.href}
-                                className="block px-4 py-2 text-[#0F2D52] hover:text-[#4FA9FF] hover:bg-gray-50 transition-colors duration-200 font-medium"
-                                role="menuitem"
-                              >
-                                {project.label}
-                              </Link>
-                            ))}
+                            {projects.map(
+                              (project) => (
+                                <Link
+                                  key={project.href}
+                                  href={project.href}
+                                  onClick={() =>
+                                    setProjectsDropdownOpen(
+                                      false
+                                    )
+                                  }
+                                  className="block px-4 py-2 text-[#0F2D52] hover:text-[#4FA9FF] hover:bg-gray-50 transition-colors duration-200 font-medium"
+                                  role="menuitem"
+                                >
+                                  {project.label}
+                                </Link>
+                              )
+                            )}
                           </motion.div>
                         )}
                       </AnimatePresence>
                     </div>
                   ) : (
+                    /* Normal link */
                     <Link
                       href={link.href}
                       className="text-[#0F2D52] hover:text-[#4FA9FF] transition-colors duration-300 font-medium text-base focus:outline-none focus:text-[#4FA9FF]"
@@ -184,11 +318,16 @@ export default function Navbar() {
               ))}
             </div>
 
+            {/* Desktop Quote */}
             <div className="hidden lg:block">
               <motion.div
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 17,
+                }}
               >
                 <Link
                   href="/contact"
@@ -199,17 +338,28 @@ export default function Navbar() {
               </motion.div>
             </div>
 
+            {/* Mobile menu button */}
             <button
               type="button"
               className="lg:hidden flex items-center justify-center w-10 h-10 rounded-lg text-[#0F2D52] hover:text-[#4FA9FF] hover:bg-gray-50 focus:outline-none focus:text-[#4FA9FF]"
               onClick={toggleMobileMenu}
-              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-label={
+                mobileMenuOpen
+                  ? "Close menu"
+                  : "Open menu"
+              }
               aria-expanded={mobileMenuOpen}
               aria-controls="mobile-menu"
             >
               <motion.div
-                animate={{ rotate: mobileMenuOpen ? 180 : 0 }}
-                transition={{ duration: 0.2 }}
+                animate={{
+                  rotate: mobileMenuOpen
+                    ? 180
+                    : 0,
+                }}
+                transition={{
+                  duration: 0.2,
+                }}
               >
                 {mobileMenuOpen ? (
                   <X className="h-6 w-6" />
@@ -222,19 +372,35 @@ export default function Navbar() {
         </nav>
       </motion.header>
 
+      {/* Mobile menu */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
             id="mobile-menu"
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
-            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            initial={{
+              opacity: 0,
+              x: "100%",
+            }}
+            animate={{
+              opacity: 1,
+              x: 0,
+            }}
+            exit={{
+              opacity: 0,
+              x: "100%",
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 300,
+              damping: 30,
+            }}
             className="fixed inset-y-0 right-0 z-40 w-full max-w-sm bg-white/95 backdrop-blur-md shadow-2xl lg:hidden"
             role="navigation"
             aria-label="Mobile menu"
           >
             <div className="flex flex-col h-full pt-20 px-6 pb-6">
+
+              {/* Close */}
               <button
                 type="button"
                 onClick={toggleMobileMenu}
@@ -247,91 +413,153 @@ export default function Navbar() {
               <nav className="flex flex-col space-y-2 mt-8">
                 {navLinks.map((link) => (
                   <div key={link.href}>
+
+                    {/* Mobile Services */}
                     {link.label === "Services" ? (
                       <div className="flex flex-col space-y-1">
                         <button
                           type="button"
-                          onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                          onClick={() =>
+                            setMobileServicesOpen(
+                              !mobileServicesOpen
+                            )
+                          }
                           className="flex items-center justify-between text-lg font-medium text-[#0F2D52] hover:text-[#4FA9FF] transition-colors duration-200 py-2 focus:outline-none"
-                          aria-expanded={mobileServicesOpen}
-                          aria-label="Toggle Services submenu"
+                          aria-expanded={
+                            mobileServicesOpen
+                          }
                         >
                           <span>Services</span>
+
                           <motion.div
-                            animate={{ rotate: mobileServicesOpen ? 180 : 0 }}
-                            transition={{ duration: 0.2 }}
+                            animate={{
+                              rotate:
+                                mobileServicesOpen
+                                  ? 180
+                                  : 0,
+                            }}
+                            transition={{
+                              duration: 0.2,
+                            }}
                           >
                             <ChevronDown className="h-5 w-5" />
                           </motion.div>
                         </button>
+
                         <AnimatePresence>
                           {mobileServicesOpen && (
                             <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: "auto" }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.2 }}
+                              initial={{
+                                opacity: 0,
+                                height: 0,
+                              }}
+                              animate={{
+                                opacity: 1,
+                                height: "auto",
+                              }}
+                              exit={{
+                                opacity: 0,
+                                height: 0,
+                              }}
+                              transition={{
+                                duration: 0.2,
+                              }}
                               className="overflow-hidden"
                             >
                               <div className="pl-4 flex flex-col space-y-2 mt-1">
-                                {services.map((service) => (
-                                  <Link
-                                    key={service.href}
-                                    href={service.href}
-                                    onClick={toggleMobileMenu}
-                                    className="text-base text-[#6B7280] hover:text-[#4FA9FF] transition-colors duration-200 py-1"
-                                  >
-                                    {service.label}
-                                  </Link>
-                                ))}
+                                {services.map(
+                                  (service) => (
+                                    <Link
+                                      key={service.href}
+                                      href={service.href}
+                                      onClick={
+                                        toggleMobileMenu
+                                      }
+                                      className="text-base text-[#6B7280] hover:text-[#4FA9FF] transition-colors duration-200 py-1"
+                                    >
+                                      {service.label}
+                                    </Link>
+                                  )
+                                )}
                               </div>
                             </motion.div>
                           )}
                         </AnimatePresence>
                       </div>
                     ) : link.label === "Projects" ? (
+                      /* Mobile Projects */
                       <div className="flex flex-col space-y-1">
                         <button
                           type="button"
-                          onClick={() => setMobileProjectsOpen(!mobileProjectsOpen)}
+                          onClick={() =>
+                            setMobileProjectsOpen(
+                              !mobileProjectsOpen
+                            )
+                          }
                           className="flex items-center justify-between text-lg font-medium text-[#0F2D52] hover:text-[#4FA9FF] transition-colors duration-200 py-2 focus:outline-none"
-                          aria-expanded={mobileProjectsOpen}
-                          aria-label="Toggle Projects submenu"
+                          aria-expanded={
+                            mobileProjectsOpen
+                          }
                         >
                           <span>Projects</span>
+
                           <motion.div
-                            animate={{ rotate: mobileProjectsOpen ? 180 : 0 }}
-                            transition={{ duration: 0.2 }}
+                            animate={{
+                              rotate:
+                                mobileProjectsOpen
+                                  ? 180
+                                  : 0,
+                            }}
+                            transition={{
+                              duration: 0.2,
+                            }}
                           >
                             <ChevronDown className="h-5 w-5" />
                           </motion.div>
                         </button>
+
                         <AnimatePresence>
                           {mobileProjectsOpen && (
                             <motion.div
-                              initial={{ opacity: 0, height: 0 }}
-                              animate={{ opacity: 1, height: "auto" }}
-                              exit={{ opacity: 0, height: 0 }}
-                              transition={{ duration: 0.2 }}
+                              initial={{
+                                opacity: 0,
+                                height: 0,
+                              }}
+                              animate={{
+                                opacity: 1,
+                                height: "auto",
+                              }}
+                              exit={{
+                                opacity: 0,
+                                height: 0,
+                              }}
+                              transition={{
+                                duration: 0.2,
+                              }}
                               className="overflow-hidden"
                             >
                               <div className="pl-4 flex flex-col space-y-2 mt-1">
-                                {projects.map((project) => (
-                                  <Link
-                                    key={project.href}
-                                    href={project.href}
-                                    onClick={toggleMobileMenu}
-                                    className="text-base text-[#6B7280] hover:text-[#4FA9FF] transition-colors duration-200 py-1"
-                                  >
-                                    {project.label}
-                                  </Link>
-                                ))}
+                                {projects.map(
+                                  (project) => (
+                                    <Link
+                                      key={project.href}
+                                      href={project.href}
+                                      onClick={
+                                        toggleMobileMenu
+                                      }
+                                      className="text-base text-[#6B7280] hover:text-[#4FA9FF] transition-colors duration-200 py-1"
+                                    >
+                                      {project.label}
+                                    </Link>
+                                  )
+                                )}
                               </div>
                             </motion.div>
                           )}
                         </AnimatePresence>
                       </div>
                     ) : (
+                      /* Mobile normal link */
                       <Link
                         href={link.href}
                         onClick={toggleMobileMenu}
@@ -344,6 +572,7 @@ export default function Navbar() {
                 ))}
               </nav>
 
+              {/* AddBill */}
               <div className="mt-4">
                 <Link
                   href="/add-bill"
@@ -354,11 +583,16 @@ export default function Navbar() {
                 </Link>
               </div>
 
+              {/* Quote */}
               <div className="mt-auto pt-6">
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 17,
+                  }}
                 >
                   <Link
                     href="/contact"
@@ -374,6 +608,7 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
+      {/* Mobile backdrop */}
       {mobileMenuOpen && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -386,5 +621,5 @@ export default function Navbar() {
         />
       )}
     </>
-  )
+  );
 }
