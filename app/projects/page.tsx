@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title:
     "Projects — Addbill Construction Solutions Limited",
   description:
-    "Explore Addbill Construction Solutions Limited's construction, quantity surveying and project managemnet portfolio.",
+    "Explore Addbill Construction Solutions Limited's construction, quantity surveying and project management portfolio.",
 };
 
 export default function ProjectsIndexPage() {
