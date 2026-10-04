@@ -110,6 +110,7 @@ export default function ContactPage() {
 
   return (
     <main className="overflow-x-clip">
+      <title>Contact Us | Addbill Construction Solutions Limited</title>
       <Navbar />
 
       {/* 1. Hero / Intro Banner */}

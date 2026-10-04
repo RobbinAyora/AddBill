@@ -170,6 +170,7 @@ export default function AboutPage() {
 
   return (
     <main className="overflow-x-clip">
+      <title>About Us | Addbill Construction Solutions Limited</title>
       <Navbar />
 
       {/* 1. Hero Banner */}
