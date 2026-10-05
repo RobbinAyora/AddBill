@@ -24,6 +24,14 @@ import {
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import StorySlideshow from "@/components/story-slideshow"
+import type { Metadata } from "next"
+
+
+export const metadata: Metadata = {
+  title: "About Addbill Construction Solutions Limited | Kenya",
+  description:
+    "Learn about Addbill Construction Solutions Limited, a quantity surveying and construction project management firm providing cost planning, project management and construction consultancy services in Kenya.",
+}
 
 const fadeUp = {
   initial: { opacity: 0, y: 40 },

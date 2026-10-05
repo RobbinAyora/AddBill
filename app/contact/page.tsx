@@ -21,6 +21,13 @@ import {
 } from "lucide-react"
 import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Contact Us | Addbill Construction Solutions Limited",
+  description:
+    "Learn about Addbill Construction Solutions Limited, a quantity surveying and construction project management firm providing cost planning, project management and construction consultancy services in Kenya.",
+}
 
 const fadeUp = {
   initial: { opacity: 0, y: 40 },
@@ -515,7 +522,7 @@ export default function ContactPage() {
               className="inline-flex items-center gap-2 bg-[#4FA9FF] text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:bg-[#3D8FE0] focus:outline-none focus:ring-2 focus:ring-[#4FA9FF] focus:ring-offset-2 transition-all duration-300"
             >
               <Phone className="w-5 h-5" />
-              +254 700 123 456
+              +254 721 237 714
             </Link>
           </motion.div>
         </motion.div>
